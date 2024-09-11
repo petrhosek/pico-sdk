@@ -64,9 +64,11 @@ void cyw43_driver_deinit(struct async_context *context);
 #endif
 
 #if CYW43_PIO_CLOCK_DIV_DYNAMIC
-void cyw43_set_pio_clock_divider_int_frac8(uint16_t clock_div_int, uint8_t clock_div_frac8);
+void cyw43_set_pio_clkdiv_int_frac8(uint16_t clock_div_int, uint8_t clock_div_frac8);
+
+// backwards compatibility
 static inline void cyw43_set_pio_clock_divisor(uint16_t clock_div_int, uint8_t clock_div_frac8) {
-    return cyw43_set_pio_clock_divider_int_frac8(clock_div_int, clock_div_frac8);
+    return cyw43_set_pio_clkdiv_int_frac8(clock_div_int, clock_div_frac8);
 }
 #endif
 

@@ -48,7 +48,7 @@
 static uint16_t cyw43_pio_clock_div_int = CYW43_PIO_CLOCK_DIV_INT;
 static uint8_t cyw43_pio_clock_div_frac8 = CYW43_PIO_CLOCK_DIV_FRAC8;
 
-void cyw43_set_pio_clock_divisor(uint16_t clock_div_int, uint8_t clock_div_frac8) {
+void cyw43_set_pio_clkdiv_int_frac8(uint16_t clock_div_int, uint8_t clock_div_frac8) {
     cyw43_pio_clock_div_int = clock_div_int;
     cyw43_pio_clock_div_frac8 = clock_div_frac8;
 }
